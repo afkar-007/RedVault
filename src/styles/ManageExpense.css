@@ -1,0 +1,365 @@
+
+
+.rv-notes-back-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.rv-notes-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 17px;
+  border: 1px solid #303030;
+  border-radius: 9px;
+  background: #151515;
+  color: #b5b5b5;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.rv-notes-back-btn i {
+  font-size: 15px;
+  transition: transform 0.3s ease;
+}
+
+.rv-notes-back-btn:hover {
+  color: #fff;
+  border-color: #ed3535;
+  background: rgba(237, 53, 53, 0.1);
+  box-shadow: 0 4px 18px rgba(237, 53, 53, 0.1);
+}
+
+.rv-notes-back-btn:hover i {
+  transform: translateX(-4px);
+}
+
+@media (max-width: 600px) {
+  .rv-notes-back-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .rv-notes-back-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
+.rv-manage-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #090909;
+  color: #fff;
+}
+
+.rv-manage-header {
+  margin-bottom: 30px;
+}
+
+.rv-manage-header span {
+  color: #ed3434;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.rv-manage-header h1 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.rv-manage-header p {
+  color: #888;
+  font-size: 14px;
+}
+
+.rv-manage-card {
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 30px;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  background: #111;
+}
+
+.rv-manage-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.rv-manage-field label {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.rv-manage-field input,
+.rv-manage-field select,
+.rv-manage-field textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  outline: none;
+  background: #191919;
+  color: white;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.rv-manage-field input:focus,
+.rv-manage-field select:focus,
+.rv-manage-field textarea:focus {
+  border-color: #e52c35;
+}
+
+.rv-manage-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.rv-manage-full {
+  grid-column: 1 / -1;
+}
+
+.rv-manage-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 13px;
+  margin-top: 10px;
+}
+
+.rv-manage-actions button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rv-manage-update {
+  background: #e52c35;
+}
+
+.rv-manage-delete {
+  background: #291719;
+  border: 1px solid #703039 !important;
+  color: #ff5962 !important;
+}
+
+.rv-manage-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rv-manage-error {
+  max-width: 750px;
+  margin-bottom: 18px;
+  padding: 13px;
+  border: 1px solid #703039;
+  border-radius: 8px;
+  background: #291719;
+  color: #ff727a;
+}
+
+.rv-manage-loading {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  background: #090909;
+  color: white;
+}
+
+.rv-manage-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #000b;
+}
+
+.rv-manage-confirm {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  border: 1px solid #492126;
+  border-radius: 15px;
+  background: #151515;
+  text-align: center;
+}
+
+.rv-manage-confirm > i {
+  color: #ff454e;
+  font-size: 35px;
+}
+
+.rv-manage-confirm h2 {
+  font-size: 21px;
+}
+
+.rv-manage-confirm p {
+  color: #999;
+  font-size: 13px;
+}
+
+.rv-manage-confirm div {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.rv-manage-confirm button {
+  padding: 11px 16px;
+  border: 1px solid #383838;
+  border-radius: 7px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.rv-manage-confirm button:last-child {
+  border-color: #e52c35;
+  background: #e52c35;
+}
+
+
+
+.confirmation-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 17, 22, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.confirmation-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e8e9ec;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: confirmPopup 0.3s ease;
+}
+
+.confirmation-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: #f0f1f3;
+  color: #202329;
+  border-radius: 17px;
+  font-size: 27px;
+}
+
+.confirmation-box h2 {
+  color: #191b20;
+  font-size: 21px;
+  font-weight: 750;
+  margin-bottom: 12px;
+}
+
+.confirmation-box p {
+  color: #858a94;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.confirmation-buttons button {
+  flex: 1;
+  height: 45px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.confirmation-cancel {
+  background-color: red;
+  color: #42464e;
+  border: 1px solid #e5e6e9;
+}
+
+.confirmation-cancel:hover {
+  background-color: black;
+  color: red;
+}
+
+.confirmation-submit {
+  background: #191b20;
+  color: #ffffff;
+  border: 1px solid #191b20;
+}
+
+.confirmation-submit:hover {
+  background: #383c44;
+  transform: translateY(-2px);
+}
+
+@keyframes confirmPopup {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-box {
+    padding: 30px 22px;
+  }
+
+  .confirmation-box h2 {
+    font-size: 19px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .rv-manage-page {
+    padding: 25px 15px;
+  }
+
+  .rv-manage-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .rv-manage-full,
+  .rv-manage-actions {
+    grid-column: 1;
+  }
+
+  .rv-manage-actions {
+    flex-direction: column;
+  }
+}

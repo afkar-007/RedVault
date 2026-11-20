@@ -1,0 +1,245 @@
+
+
+.rv-edit-note-page {
+  min-height: 100vh;
+  padding: 45px 6%;
+  background: #080808;
+  color: #fff;
+}
+
+.rv-edit-note-container {
+  max-width: 850px;
+  margin: auto;
+}
+
+.rv-edit-note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.rv-edit-note-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.rv-edit-note-back:hover {
+  color: #ff3939;
+}
+
+.rv-edit-note-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff4545;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.rv-edit-note-card {
+  padding: 45px;
+  border: 1px solid #292929;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #171717, #0e0e0e);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.rv-edit-note-heading {
+  margin-bottom: 35px;
+}
+
+.rv-edit-note-heading h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.rv-edit-note-heading p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.rv-edit-note-field {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 25px;
+}
+
+.rv-edit-note-field label {
+  color: #ddd;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rv-edit-note-field input,
+.rv-edit-note-field textarea {
+  width: 100%;
+  padding: 15px 17px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  outline: none;
+  background: #101010;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.rv-edit-note-field input:focus,
+.rv-edit-note-field textarea:focus {
+  border-color: #e83232;
+  box-shadow: 0 0 0 3px rgba(232, 50, 50, 0.1);
+}
+
+.rv-edit-note-field textarea {
+  min-height: 230px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.rv-edit-note-field input::placeholder,
+.rv-edit-note-field textarea::placeholder {
+  color: #555;
+}
+
+.rv-edit-note-field > span {
+  align-self: flex-end;
+  color: #666;
+  font-size: 11px;
+}
+
+.rv-edit-note-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 13px;
+  margin-top: 35px;
+}
+
+.rv-edit-note-cancel,
+.rv-edit-note-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 135px;
+  padding: 13px 20px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rv-edit-note-cancel {
+  border: 1px solid #383838;
+  background: #171717;
+  color: #ccc;
+}
+
+.rv-edit-note-cancel:hover {
+  border-color: #666;
+  color: #fff;
+}
+
+.rv-edit-note-actions button {
+  border: 1px solid #ed3535;
+  background: #ed3535;
+  color: #fff;
+}
+
+.rv-edit-note-actions button:hover:not(:disabled) {
+  background: #c92525;
+  border-color: #c92525;
+  transform: translateY(-2px);
+}
+
+.rv-edit-note-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rv-edit-note-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding: 13px 15px;
+  border: 1px solid rgba(255, 60, 60, 0.25);
+  border-radius: 9px;
+  background: rgba(255, 40, 40, 0.08);
+  color: #ff6969;
+  font-size: 13px;
+}
+
+.rv-edit-note-state {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #080808;
+  color: #aaa;
+}
+
+.rv-edit-note-loader,
+.rv-edit-note-button-loader {
+  border: 3px solid #333;
+  border-top-color: #ff3939;
+  border-radius: 50%;
+  animation: rv-edit-note-spin 0.8s linear infinite;
+}
+
+.rv-edit-note-loader {
+  width: 35px;
+  height: 35px;
+}
+
+.rv-edit-note-button-loader {
+  width: 15px;
+  height: 15px;
+}
+
+@keyframes rv-edit-note-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .rv-edit-note-page {
+    padding: 25px 5%;
+  }
+
+  .rv-edit-note-card {
+    padding: 25px 20px;
+  }
+
+  .rv-edit-note-heading h1 {
+    font-size: 25px;
+  }
+
+  .rv-edit-note-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .rv-edit-note-actions {
+    flex-direction: column-reverse;
+  }
+
+  .rv-edit-note-cancel,
+  .rv-edit-note-actions button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,74 @@
+
+.rv-error-message {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+  background: rgba(220, 38, 55, 0.08);
+  border: 1px solid rgba(220, 38, 55, 0.35);
+  border-left: 3px solid #ed3445;
+  border-radius: 9px;
+  animation: rvErrorShow 0.3s ease;
+}
+
+.rv-error-icon {
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(237, 52, 69, 0.13);
+  color: #ff5363;
+  border-radius: 8px;
+  font-size: 17px;
+}
+
+.rv-error-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.rv-error-content h4 {
+  margin: 0 0 4px;
+  color: #ff5363;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.rv-error-content p {
+  margin: 0;
+  color: #c5a5a8;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.rv-error-close {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: #a77b7f;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px;
+  transition: 0.2s;
+}
+
+.rv-error-close:hover {
+  color: #ff5363;
+}
+
+@keyframes rvErrorShow {
+  from {
+    opacity: 0;
+    transform: translateY(-7px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,252 @@
+
+
+.rv-notes-back-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.rv-notes-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 17px;
+  border: 1px solid #303030;
+  border-radius: 9px;
+  background: #151515;
+  color: #b5b5b5;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.rv-notes-back-btn i {
+  font-size: 15px;
+  transition: transform 0.3s ease;
+}
+
+.rv-notes-back-btn:hover {
+  color: #fff;
+  border-color: #ed3535;
+  background: rgba(237, 53, 53, 0.1);
+  box-shadow: 0 4px 18px rgba(237, 53, 53, 0.1);
+}
+
+.rv-notes-back-btn:hover i {
+  transform: translateX(-4px);
+}
+
+@media (max-width: 600px) {
+  .rv-notes-back-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .rv-notes-back-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
+.rv-manage-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #090909;
+  color: #fff;
+}
+
+.rv-manage-header {
+  margin-bottom: 30px;
+}
+
+.rv-manage-header span {
+  color: #ed3434;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.rv-manage-header h1 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.rv-manage-header p {
+  color: #888;
+  font-size: 14px;
+}
+
+.rv-manage-card {
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 30px;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  background: #111;
+}
+
+.rv-manage-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.rv-manage-field label {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.rv-manage-field input,
+.rv-manage-field select,
+.rv-manage-field textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  outline: none;
+  background: #191919;
+  color: white;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.rv-manage-field input:focus,
+.rv-manage-field select:focus,
+.rv-manage-field textarea:focus {
+  border-color: #e52c35;
+}
+
+.rv-manage-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.rv-manage-full {
+  grid-column: 1 / -1;
+}
+
+.rv-manage-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 13px;
+  margin-top: 10px;
+}
+
+.rv-manage-actions button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rv-manage-update {
+  background: #e52c35;
+}
+
+.rv-manage-delete {
+  background: #291719;
+  border: 1px solid #703039 !important;
+  color: #ff5962 !important;
+}
+
+.rv-manage-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rv-manage-error {
+  max-width: 750px;
+  margin-bottom: 18px;
+  padding: 13px;
+  border: 1px solid #703039;
+  border-radius: 8px;
+  background: #291719;
+  color: #ff727a;
+}
+
+.rv-manage-loading {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  background: #090909;
+  color: white;
+}
+
+.rv-manage-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #000b;
+}
+
+.rv-manage-confirm {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  border: 1px solid #492126;
+  border-radius: 15px;
+  background: #151515;
+  text-align: center;
+}
+
+.rv-manage-confirm > i {
+  color: #ff454e;
+  font-size: 35px;
+}
+
+.rv-manage-confirm h2 {
+  font-size: 21px;
+}
+
+.rv-manage-confirm p {
+  color: #999;
+  font-size: 13px;
+}
+
+.rv-manage-confirm div {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.rv-manage-confirm button {
+  padding: 11px 16px;
+  border: 1px solid #383838;
+  border-radius: 7px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+}
+
+.rv-manage-confirm button:last-child {
+  border-color: #e52c35;
+  background: #e52c35;
+}
+
+@media (max-width: 600px) {
+  .rv-manage-page {
+    padding: 25px 15px;
+  }
+
+  .rv-manage-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .rv-manage-full,
+  .rv-manage-actions {
+    grid-column: 1;
+  }
+
+  .rv-manage-actions {
+    flex-direction: column;
+  }
+}
