@@ -30,11 +30,21 @@ function Home() {
   })
 
   async function ProfileFetch() {
+    try{
+      setLoading(true)
     const response = await fetch(`https://redvault-backend.onrender.com/user/profile/${id}`);
     const data = await response.json();
     console.log(data);
 
     setProfile(data.data);
+    }
+    catch(err){
+      console.log(err.message);
+      
+    }
+    finally{
+      setLoading(false)
+    }
   }
 
   const [transactions, setTransactions] = useState([]);
@@ -108,6 +118,8 @@ function Home() {
 
   async function fetchingNotes() {
     try {
+      setLoading(true)
+
       const response = await fetch(
         `https://redvault-backend.onrender.com/notes/getNotes/${userId}`,
       );
@@ -124,6 +136,9 @@ function Home() {
       }
     } catch (err) {
       console.log(err.message);
+    }
+    finally{
+      setLoading(false)
     }
   }
 
