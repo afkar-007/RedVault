@@ -1,6 +1,6 @@
  export async function GetTransaction(id) {
 
-    const response = await fetch(`http://localhost:3000/transaction/transactionsGet/${id}`)
+    const response = await fetch(`https://redvault-backend.onrender.com/transaction/transactionsGet/${id}`)
 
     const getData = await response.json()
 

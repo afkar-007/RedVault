@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/NoteView.css";
 import Loading from "../components/Loading";
 
-const API_URL = "http://localhost:3000/notes";
+const API_URL = "https://redvault-backend.onrender.com/notes";
 
 function NoteView() {
   const { id } = useParams();

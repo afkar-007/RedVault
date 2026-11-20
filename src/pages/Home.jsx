@@ -30,7 +30,7 @@ function Home() {
   })
 
   async function ProfileFetch() {
-    const response = await fetch(`http://localhost:3000/user/profile/${id}`);
+    const response = await fetch(`https://redvault-backend.onrender.com/user/profile/${id}`);
     const data = await response.json();
     console.log(data);
 
@@ -109,7 +109,7 @@ function Home() {
   async function fetchingNotes() {
     try {
       const response = await fetch(
-        `http://localhost:3000/notes/getNotes/${userId}`,
+        `https://redvault-backend.onrender.com/notes/getNotes/${userId}`,
       );
 
       const data = await response.json();

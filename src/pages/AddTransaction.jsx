@@ -102,7 +102,7 @@ function AddTransaction() {
     try {
       setLoading(true);
 
-      const response = await fetch(`http://localhost:3000/transaction/transactionAdded/${userId}`, {
+      const response = await fetch(`https://redvault-backend.onrender.com/transaction/transactionAdded/${userId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

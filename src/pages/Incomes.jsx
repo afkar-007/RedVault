@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Incomes.css";
 import Loading from "../components/Loading";
-const API_URL = "http://localhost:3000/transaction";
+const API_URL = "https://redvault-backend.onrender.com";
 
 function Incomes() {
   const [incomes, setIncomes] = useState([]);

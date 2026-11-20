@@ -48,7 +48,7 @@ function Profile() {
  setLoading(true)
     
 
-    const response = await fetch(`http://localhost:3000/user/profile/${id}`) 
+    const response = await fetch(`https://redvault-backend.onrender.com/user/profile/${id}`) 
     const data = await response.json()  
     console.log(data);
      

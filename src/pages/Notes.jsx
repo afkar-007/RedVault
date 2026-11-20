@@ -5,7 +5,7 @@ import "../styles/Notes.css";
 import { useNavigate } from "react-router-dom";
 import Loading from "../components/Loading";
 
-const API_URL = "http://localhost:3000/notes";
+const API_URL = "https://redvault-backend.onrender.com/notes";
 
 function Notes() {
   const navigate = useNavigate()

@@ -22,7 +22,7 @@ function Expenses() {
 
   const id = localStorage.getItem("id");
 
-  const API_URL = `http://localhost:3000/transaction/transactionsGet/${id}`;
+  const API_URL = `https://redvault-backend.onrender.com/transaction/transactionsGet/${id}`;
 
   async function fetchExpenses() {
     try {

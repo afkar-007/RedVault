@@ -1,6 +1,6 @@
 export async function LoginService(data) {
    
-    const response = await fetch("http://localhost:3000/user/login",{
+    const response = await fetch("https://redvault-backend.onrender.com/user/login",{
         method:"POST",
           headers: {
     'Content-Type': 'application/json'},
@@ -21,7 +21,7 @@ export async function LoginService(data) {
 
 export async function RegisterService(data) {
    
-    const response = await fetch("http://localhost:3000/user/register",{
+    const response = await fetch("https://redvault-backend.onrender.com/user/register",{
         method:"POST",
           headers: {
     'Content-Type': 'application/json'},

@@ -26,7 +26,7 @@ function ManageExpense() {
 
   console.log(id);
 
-  const API_URL = `http://localhost:3000/transaction/transactionsGetOne/${id}`;
+  const API_URL = `hhttps://redvault-backend.onrender.com/transaction/transactionsGetOne/${id}`;
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);

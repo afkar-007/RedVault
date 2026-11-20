@@ -63,7 +63,7 @@ function AddNote() {
         userId:id
       };
 
-      const response = await fetch(`http://localhost:3000/notes/addNotes`, {
+      const response = await fetch(`https://redvault-backend.onrender.com/notes/addNotes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
