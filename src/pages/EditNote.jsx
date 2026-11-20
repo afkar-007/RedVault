@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import "../styles/EditNote.css";
 import Loading from "../components/Loading";
 
-const API_URL = "https://redvault-backend.onrender.com";
+const API_URL = "https://redvault-backend.onrender.com/notes";
 
 function EditNote() {
 
