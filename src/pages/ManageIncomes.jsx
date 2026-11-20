@@ -106,7 +106,7 @@ function ManageIncomes() {
       };
 
       const response = await fetch(
-        `http://localhost:3000/transaction/transactionEdit/${id}`,
+        `https://redvault-backend.onrender.com/transaction/transactionEdit/${id}`,
         {
           method: "PUT",
           headers: {
@@ -149,7 +149,7 @@ function ManageIncomes() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:3000/transaction/transactionDelete/${id}`,
+        `https://redvault-backend.onrender.com/transaction/transactionDelete/${id}`,
         {
           method: "DELETE",
           headers: {

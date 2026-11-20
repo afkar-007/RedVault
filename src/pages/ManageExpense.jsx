@@ -26,7 +26,7 @@ function ManageExpense() {
 
   console.log(id);
 
-  const API_URL = `hhttps://redvault-backend.onrender.com/transaction/transactionsGetOne/${id}`;
+  const API_URL = `https://redvault-backend.onrender.com/transaction/transactionsGetOne/${id}`;
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -113,7 +113,7 @@ function ManageExpense() {
       };
 
       const response = await fetch(
-        `http://localhost:3000/transaction/transactionEdit/${id}`,
+        `https://redvault-backend.onrender.com/transaction/transactionEdit/${id}`,
         {
           method: "PUT",
           headers: {
@@ -160,7 +160,7 @@ function ManageExpense() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:3000/transaction/transactionDelete/${id}`,
+        `https://redvault-backend.onrender.com/transaction/transactionDelete/${id}`,
         {
           method: "DELETE",
           headers: {
