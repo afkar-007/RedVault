@@ -1,7 +1,7 @@
 
 import "../styles/HomeLoading.css";
 import homeLoadingGif from "../assets/HpageLoading.gif"
-import HLoading from '../assets/homeLoading.gif'
+import HLoading from '../assets/userLoading.gif'
 
 function HomeLoading() {
   return (
@@ -14,11 +14,7 @@ function HomeLoading() {
           alt="Loading Dashboard"
           className="home-loading-gif"
         />
-        <img
-          src={HLoading}
-          alt="Loading Dashboard"
-          className="home-loading-gif"
-        />
+     
 
      
 
