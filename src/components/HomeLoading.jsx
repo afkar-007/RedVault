@@ -10,7 +10,7 @@ function HomeLoading() {
 
        
         <img
-          src={homeLoadingGif}
+          src={HLoading}
           alt="Loading Dashboard"
           className="home-loading-gif"
         />
