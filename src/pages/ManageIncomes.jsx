@@ -21,7 +21,7 @@ function ManageIncomes() {
     description: "",
   });
 
-  console.log(id);
+ 
 
   const API_URL = `https://redvault-backend.onrender.com/transaction/transactionsGetOne/${id}`;
 
@@ -58,7 +58,7 @@ function ManageIncomes() {
 
       const data = await response.json();
 
-      console.log(data);
+   
 
       if (!response.ok) {
         throw new Error(data.message || "Unable to fetch expense");
@@ -119,7 +119,7 @@ function ManageIncomes() {
 
       const data = await response.json();
 
-      console.log(sendData);
+      
 
       if (!response.ok) {
         alert(data.message);

@@ -34,7 +34,7 @@ function Home() {
       setLoading(true)
     const response = await fetch(`https://redvault-backend.onrender.com/user/profile/${id}`);
     const data = await response.json();
-    console.log(data);
+   
 
     setProfile(data.data);
     }
@@ -92,7 +92,7 @@ function Home() {
     try{setLoading(true)
     const response = await GetTransaction(id);
 
-    console.log(response);
+  
 
     setTransactions(response.data);
     }catch(err){
@@ -125,7 +125,7 @@ function Home() {
       );
 
       const data = await response.json();
-      console.log(data);
+      
 
       if (!response.ok) {
         console.log(data.message);
@@ -242,7 +242,7 @@ function Home() {
           <div>
             <span>MONDAY, YOUR FINANCIAL RESET</span>
             <h1>
-              Good afternoon, <strong>{profile.name}.</strong>
+              Good afternoon, <strong>{profile?.name}.</strong>
             </h1>
             <p>
               Here's what's happening with your money today. Stay focused on

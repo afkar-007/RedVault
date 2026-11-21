@@ -72,7 +72,7 @@ function AddNote() {
         body: JSON.stringify(sendData),
       });
 
-      console.log(sendData);
+      
       
 
       const data = await response.json();

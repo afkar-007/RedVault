@@ -41,7 +41,7 @@ function Notes() {
     try {
       setLoading(true);
       setError("");
-   console.log(userId);
+  
    
       const response = await fetch(`${API_URL}/getNotes/${userId}`, {
         headers: {
@@ -51,7 +51,7 @@ function Notes() {
 
       const data = await response.json();
 
-      console.log(data);
+      
       
 
       if (!response.ok) {

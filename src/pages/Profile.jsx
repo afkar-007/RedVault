@@ -30,7 +30,7 @@ function Profile() {
   const email = localStorage.getItem("email") || "Email not available";
   const id = localStorage.getItem("id") || "Not available";
 
-  const firstLetter = name.charAt(0).toUpperCase();
+  const firstLetter = name?.charAt(0).toUpperCase();
 
   function handleLogout() {
     localStorage.removeItem("token");
@@ -50,7 +50,7 @@ function Profile() {
 
     const response = await fetch(`https://redvault-backend.onrender.com/user/profile/${id}`) 
     const data = await response.json()  
-    console.log(data);
+    
      
 
     setProfile(data.data)
@@ -160,7 +160,7 @@ function Profile() {
             <h1>
               Welcome back,
               <br />
-              <span>{profile.name}</span>
+              <span>{profile?.name}</span>
             </h1>
             <p>
               Manage your account information and keep your
@@ -184,8 +184,8 @@ function Profile() {
               </div>
 
               <div className="rv-profile-identity">
-                <h2>{profile.name}</h2>
-                <p>{profile.email}</p>
+                <h2>{profile?.name}</h2>
+                <p>{profile?.email}</p>
 
                 <div className="rv-profile-member-badge">
                   <span></span>
@@ -224,7 +224,7 @@ function Profile() {
 
               <div>
                 <span>Full Name</span>
-                <h3>{profile.name}</h3>
+                <h3>{profile?.name}</h3>
               </div>
             </div>
 
@@ -235,7 +235,7 @@ function Profile() {
 
               <div>
                 <span>Email Address</span>
-                <h3>{profile.email}</h3>
+                <h3>{profile?.email}</h3>
               </div>
             </div>
 
