@@ -228,7 +228,7 @@ function Notes() {
               >
                 <h3>{note.title}</h3>
 
-                <p>{note.description}</p>
+                <p>{note.content}</p>
               </Link>
 
               <div className="rv-notes-card-footer">
